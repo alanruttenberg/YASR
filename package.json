@@ -63,11 +63,11 @@
     "url": "https://github.com/YASGUI/YASR.git"
   },
   "dependencies": {
-    "jquery": "~ 1.11.0",
+      "jquery": "^ 2.0.0",
     "codemirror": "^4.7.0",
     "yasgui-utils": "^1.4.1",
     "pivottable": "^1.2.2",
-    "jquery-ui": "^1.10.5",
+    "jquery-ui": "^1.11",
     "d3": "^3.4.13"
   },
   "browserify-shim": {
