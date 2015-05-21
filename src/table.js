@@ -331,7 +331,7 @@ root.defaults = {
 		"dom": '<"dtTopHeader"ilf>rtip',
 		"order": [],//disable initial sorting
 		"pageLength": 50,//default page length
-    	"lengthMenu": [[10, 50, 100, 1000, -1], [10, 50, 100, 1000, "All"]],//possible page lengths
+    	    "lengthMenu": [[10, 50, 100, 200, 500, 1000, -1], [10, 50, 100, 200, 500, 1000, "All"]],//possible page lengths
     	"lengthChange": true,//allow changing page length
     	"pagingType": "full_numbers",//how to show the pagination options
         "drawCallback": function ( oSettings ) {

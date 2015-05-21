@@ -51,7 +51,7 @@ var root = module.exports = function(parent, options, queryResults) {
 	}
 	
 	//first initialize plugins
-	yasr.plugins = {};
+    yasr.plugins = {};
 	for (var pluginName in root.plugins) {
 		if (!yasr.options.useGoogleCharts && pluginName == "gchart") continue; 
 		yasr.plugins[pluginName] = new root.plugins[pluginName](yasr);
@@ -429,9 +429,9 @@ root.$ = $;
 
 
 //put these in a try-catch. When using the unbundled version, and when some dependencies are missing, then YASR as a whole will still function
-try {root.registerOutput('boolean', require("./boolean.js"))} catch(e){};
-try {root.registerOutput('rawResponse', require("./rawResponse.js"))} catch(e){};
-try {root.registerOutput('table', require("./table.js"))} catch(e){};
-try {root.registerOutput('error', require("./error.js"))} catch(e){};
-try {root.registerOutput('pivot', require("./pivot.js"))} catch(e){};
-try {root.registerOutput('gchart', require("./gchart.js"))} catch(e){};
+try {root.registerOutput('boolean', require("./boolean.js"))} catch(e){console.log("couldn't load boolean output plugin")};
+try {root.registerOutput('rawResponse', require("./rawResponse.js"))} catch(e){console.log("couldn't load raw response output plugin")};
+try {root.registerOutput('table', require("./table.js"))} catch(e){console.log("couldn't load table output plugin")};
+try {root.registerOutput('error', require("./error.js"))} catch(e){console.log("couldn't load error output plugin")};
+try {root.registerOutput('pivot', require("./pivot.js"))} catch(e){console.log("couldn't load pivot table output plugin")};
+try {root.registerOutput('gchart', require("./gchart.js"))} catch(e){console.log("couldn't load google chart output plugin")};
